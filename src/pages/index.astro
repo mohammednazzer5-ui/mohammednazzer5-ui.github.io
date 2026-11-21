@@ -28,12 +28,12 @@ const projects = [
   },
   {
   number: "03",
-  type: "Python application · Open source",
+  type: "Full-stack task manager",
   title: "TaskVault",
-  description: "A Python task-management application with user authentication, task management and REST API functionality.",
-  stack: ["Python", "Flask", "SQLite", "REST API"],
+  description: "Full-stack task manager with JWT authentication, role-based admin access, task CRUD, and strict data isolation. Built with Flask, SQLite, and a clean vanilla JavaScript frontend. Includes automated tests and Docker support.",
+  stack: ["Python", "Flask", "JWT", "SQLite", "JavaScript"],
   link: "https://github.com/mohammednazzer5-ui/taskvault",
-  linkText: "View source code"
+  linkText: "View repository"
 }
 ];
 <section class="section skills-section" id="github">
@@ -199,8 +199,27 @@ const projects = [
             <div class="project-top"><span class="project-number">{project.number}</span><span class="project-type">{project.type}</span><span class="project-symbol">↗</span></div>
             <div class="project-visual">
               {project.number === "01" ? <div class="mock-browser"><div class="mock-bar"><i></i><i></i><i></i><span>immanuelusa.org</span></div><div class="mock-content"><div class="mock-logo">IMMANUEL <small>USA</small></div><div class="mock-title">Biblical learning.<br /><em>Made accessible.</em></div><div class="mock-lines"><i></i><i></i></div><div class="mock-button"></div></div></div> :
-              project.number === "02" ? <div class="audit-visual"><div class="audit-orbit orbit-a"></div><div class="audit-orbit orbit-b"></div><div class="audit-center">A<span>F</span></div><div class="audit-caption">DIGITAL EXPERIENCE AUDIT</div></div> :
-              <div class="portal-visual"><div class="portal-side"><b>MN</b><i></i><i></i><i></i><i></i></div><div class="portal-main"><span>STUDENT DASHBOARD</span><b>Welcome back</b><div class="portal-boxes"><i></i><i></i><i></i></div><div class="portal-row"></div><div class="portal-row short"></div></div></div>}
+              project.number === "02" ? (
+  <div class="audit-visual">
+    <div class="audit-orbit orbit-a"></div>
+    <div class="audit-orbit orbit-b"></div>
+    <div class="audit-center">A<span>F</span></div>
+    <div class="audit-caption">DIGITAL EXPERIENCE AUDIT</div>
+  </div>
+) : (
+  <div class="portal-visual">
+    <div class="portal-side">
+      <b>TV</b><i></i><i></i><i></i><i></i>
+    </div>
+    <div class="portal-main">
+      <span>TASK DASHBOARD</span>
+      <b>My Tasks</b>
+      <div class="portal-boxes"><i></i><i></i><i></i></div>
+      <div class="portal-row"></div>
+      <div class="portal-row short"></div>
+    </div>
+  </div>
+) class="portal-side"><b>MN</b><i></i><i></i><i></i><i></i></div><div class="portal-main"><span>STUDENT DASHBOARD</span><b>Welcome back</b><div class="portal-boxes"><i></i><i></i><i></i></div><div class="portal-row"></div><div class="portal-row short"></div></div></div>}
             </div>
             <div class="project-info"><h3>{project.title}</h3><p>{project.description}</p><div class="tag-list">{project.stack.map(tag => <span>{tag}</span>)}</div><a class="project-link" href={project.link} target="_blank" rel="noreferrer">{project.linkText} <span>↗</span></a></div>
           </article>
