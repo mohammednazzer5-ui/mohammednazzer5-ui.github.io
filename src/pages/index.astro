@@ -27,15 +27,75 @@ const projects = [
     linkText: "View project"
   },
   {
-    number: "03",
-    type: "Learning management",
-    title: "Student Learning Portal",
-    description: "Student-facing learning workflows including registration, account access, course content and assignment submission. Presented as part of the Immanuel USA platform.",
-    stack: ["PHP", "MySQL", "JavaScript"],
-    link: "https://immanuelusa.org/",
-    linkText: "View platform"
-  }
+  number: "03",
+  type: "Python application · Open source",
+  title: "TaskVault",
+  description: "A Python task-management application with user authentication, task management and REST API functionality.",
+  stack: ["Python", "Flask", "SQLite", "REST API"],
+  link: "https://github.com/mohammednazzer5-ui/taskvault",
+  linkText: "View source code"
+}
 ];
+
+<section class="section skills-section" id="github">
+  <div class="wrap">
+    <div class="section-label">
+      <span>04</span> GITHUB &amp; OPEN SOURCE
+    </div>
+
+    <div class="section-heading-row">
+      <h2>Code, projects &amp; learning.</h2>
+      <p>Explore my repositories,<br />development work and code.</p>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-info">
+          <h3>TaskVault</h3>
+          <p>Python task-management application and open-source development project.</p>
+          <div class="tag-list">
+            <span>Python</span><span>Flask</span><span>SQLite</span>
+          </div>
+          <a class="project-link"
+             href="https://github.com/mohammednazzer5-ui/taskvault"
+             target="_blank" rel="noreferrer">
+            View repository ↗
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-info">
+          <h3>Portfolio Source Code</h3>
+          <p>Source code for my personal developer portfolio, built with Astro.</p>
+          <div class="tag-list">
+            <span>Astro</span><span>JavaScript</span><span>CSS</span>
+          </div>
+          <a class="project-link"
+             href="https://github.com/mohammednazzer5-ui/mohammednazzer5-ui.github.io"
+             target="_blank" rel="noreferrer">
+            View repository ↗
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-info">
+          <h3>GitHub Developer Profile</h3>
+          <p>My developer introduction, skills and public GitHub activity.</p>
+          <div class="tag-list">
+            <span>GitHub</span><span>Developer Profile</span>
+          </div>
+          <a class="project-link"
+             href="https://github.com/mohammednazzer5-ui"
+             target="_blank" rel="noreferrer">
+            Visit GitHub profile ↗
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 ---
 <BaseLayout>
   <header class="site-header">
@@ -43,6 +103,7 @@ const projects = [
       <a class="brand" href="#home" aria-label="Mohammed Nazzer home"><span class="brand-mark">MN</span><span>Mohammed Nazzer</span></a>
       <div class="nav-links">
         <a href="#about">About</a>
+<a href="#github">GitHub</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
