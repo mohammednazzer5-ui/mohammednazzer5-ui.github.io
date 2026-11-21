@@ -27,86 +27,15 @@ const projects = [
     linkText: "View project"
   },
   {
-  number: "03",
-  type: "Full-stack task manager",
-  title: "TaskVault",
-  description: "Full-stack task manager with JWT authentication, role-based admin access, task CRUD, and strict data isolation. Built with Flask, SQLite, and a clean vanilla JavaScript frontend. Includes automated tests and Docker support.",
-  stack: ["Python", "Flask", "JWT", "SQLite", "JavaScript"],
-  link: "https://github.com/mohammednazzer5-ui/taskvault",
-  linkText: "View repository"
-}
+    number: "03",
+    type: "Full-stack task manager",
+    title: "TaskVault",
+    description: "Full-stack task manager with JWT authentication, role-based admin access, task CRUD, and strict data isolation. Built with Flask, SQLite, and a clean vanilla JavaScript frontend. Includes automated tests and Docker support.",
+    stack: ["Python", "Flask", "JWT", "SQLite", "JavaScript"],
+    link: "https://github.com/mohammednazzer5-ui/taskvault",
+    linkText: "View repository"
+  }
 ];
-<section class="section skills-section" id="github">
-  <div class="wrap">
-    <div class="section-label">
-      <span>04</span> GITHUB &amp; OPEN SOURCE
-    </div>
-
-    <div class="section-heading-row">
-      <h2>Code, projects &amp; learning.</h2>
-      <p>Explore my repositories,<br />development work and code.</p>
-    </div>
-  </div>
-</section>
-<section class="section skills-section" id="github">
-  <div class="wrap">
-    <div class="section-label">
-      <span>04</span> GITHUB &amp; OPEN SOURCE
-    </div>
-
-    <div class="section-heading-row">
-      <h2>Code, projects &amp; learning.</h2>
-      <p>Explore my repositories,<br />development work and code.</p>
-    </div>
-
-    <div class="projects-grid">
-      <article class="project-card">
-        <div class="project-info">
-          <h3>TaskVault</h3>
-          <p>Python task-management application and open-source development project.</p>
-          <div class="tag-list">
-            <span>Python</span><span>Flask</span><span>SQLite</span>
-          </div>
-          <a class="project-link"
-             href="https://github.com/mohammednazzer5-ui/taskvault"
-             target="_blank" rel="noreferrer">
-            View repository ↗
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-info">
-          <h3>Portfolio Source Code</h3>
-          <p>Source code for my personal developer portfolio, built with Astro.</p>
-          <div class="tag-list">
-            <span>Astro</span><span>JavaScript</span><span>CSS</span>
-          </div>
-          <a class="project-link"
-             href="https://github.com/mohammednazzer5-ui/mohammednazzer5-ui.github.io"
-             target="_blank" rel="noreferrer">
-            View repository ↗
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-info">
-          <h3>GitHub Developer Profile</h3>
-          <p>My developer introduction, skills and public GitHub activity.</p>
-          <div class="tag-list">
-            <span>GitHub</span><span>Developer Profile</span>
-          </div>
-          <a class="project-link"
-             href="https://github.com/mohammednazzer5-ui"
-             target="_blank" rel="noreferrer">
-            Visit GitHub profile ↗
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
 ---
 <BaseLayout>
   <header class="site-header">
@@ -114,7 +43,6 @@ const projects = [
       <a class="brand" href="#home" aria-label="Mohammed Nazzer home"><span class="brand-mark">MN</span><span>Mohammed Nazzer</span></a>
       <div class="nav-links">
         <a href="#about">About</a>
-<a href="#github">GitHub</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
@@ -196,32 +124,50 @@ const projects = [
       <div class="projects-grid">
         {projects.map((project) => (
           <article class="project-card">
-            <div class="project-top"><span class="project-number">{project.number}</span><span class="project-type">{project.type}</span><span class="project-symbol">↗</span></div>
-            <div class="project-visual">
-              {project.number === "01" ? <div class="mock-browser"><div class="mock-bar"><i></i><i></i><i></i><span>immanuelusa.org</span></div><div class="mock-content"><div class="mock-logo">IMMANUEL <small>USA</small></div><div class="mock-title">Biblical learning.<br /><em>Made accessible.</em></div><div class="mock-lines"><i></i><i></i></div><div class="mock-button"></div></div></div> :
-              project.number === "02" ? (
-  <div class="audit-visual">
-    <div class="audit-orbit orbit-a"></div>
-    <div class="audit-orbit orbit-b"></div>
-    <div class="audit-center">A<span>F</span></div>
-    <div class="audit-caption">DIGITAL EXPERIENCE AUDIT</div>
-  </div>
-) : (
-  <div class="portal-visual">
-    <div class="portal-side">
-      <b>TV</b><i></i><i></i><i></i><i></i>
-    </div>
-    <div class="portal-main">
-      <span>TASK DASHBOARD</span>
-      <b>My Tasks</b>
-      <div class="portal-boxes"><i></i><i></i><i></i></div>
-      <div class="portal-row"></div>
-      <div class="portal-row short"></div>
-    </div>
-  </div>
-) class="portal-side"><b>MN</b><i></i><i></i><i></i><i></i></div><div class="portal-main"><span>STUDENT DASHBOARD</span><b>Welcome back</b><div class="portal-boxes"><i></i><i></i><i></i></div><div class="portal-row"></div><div class="portal-row short"></div></div></div>}
+            <div class="project-top">
+              <span class="project-number">{project.number}</span>
+              <span class="project-type">{project.type}</span>
+              <span class="project-symbol">↗</span>
             </div>
-            <div class="project-info"><h3>{project.title}</h3><p>{project.description}</p><div class="tag-list">{project.stack.map(tag => <span>{tag}</span>)}</div><a class="project-link" href={project.link} target="_blank" rel="noreferrer">{project.linkText} <span>↗</span></a></div>
+            <div class="project-visual">
+              {project.number === "01" ? (
+                <div class="mock-browser">
+                  <div class="mock-bar"><i></i><i></i><i></i><span>immanuelusa.org</span></div>
+                  <div class="mock-content">
+                    <div class="mock-logo">IMMANUEL <small>USA</small></div>
+                    <div class="mock-title">Biblical learning.<br /><em>Made accessible.</em></div>
+                    <div class="mock-lines"><i></i><i></i></div>
+                    <div class="mock-button"></div>
+                  </div>
+                </div>
+              ) : project.number === "02" ? (
+                <div class="audit-visual">
+                  <div class="audit-orbit orbit-a"></div>
+                  <div class="audit-orbit orbit-b"></div>
+                  <div class="audit-center">A<span>F</span></div>
+                  <div class="audit-caption">DIGITAL EXPERIENCE AUDIT</div>
+                </div>
+              ) : (
+                <div class="portal-visual">
+                  <div class="portal-side">
+                    <b>TV</b><i></i><i></i><i></i><i></i>
+                  </div>
+                  <div class="portal-main">
+                    <span>TASK DASHBOARD</span>
+                    <b>My Tasks</b>
+                    <div class="portal-boxes"><i></i><i></i><i></i></div>
+                    <div class="portal-row"></div>
+                    <div class="portal-row short"></div>
+                  </div>
+                </div>
+              )}
+            </div>
+            <div class="project-info">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <div class="tag-list">{project.stack.map(tag => <span>{tag}</span>)}</div>
+              <a class="project-link" href={project.link} target="_blank" rel="noreferrer">{project.linkText} <span>↗</span></a>
+            </div>
           </article>
         ))}
       </div>
@@ -234,9 +180,31 @@ const projects = [
         <div class="timeline-grid">
           <div><h2>Experience that<br /><span>keeps evolving.</span></h2></div>
           <div class="timeline">
-            <article class="timeline-item"><div class="timeline-date">FEB 2021 — PRESENT</div><div><h3>Freelance Full-Stack Developer</h3><p class="timeline-place">Independent / Client Projects</p><p>Developing and maintaining websites and web applications, including database-backed portals, authentication, admin dashboards and responsive user interfaces.</p><div class="tag-list"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Python</span></div></div></article>
-            <article class="timeline-item"><div class="timeline-date">2023</div><div><h3>Master's in Biblical Studies</h3><p class="timeline-place">University of Christian Studies and Seminary</p><p>Completed in 2023.</p></div></article>
-            <article class="timeline-item"><div class="timeline-date">2019</div><div><h3>Associate Degree in Business Administration</h3><p class="timeline-place">University of the People</p><p>Completed in 2019.</p></div></article>
+            <article class="timeline-item">
+              <div class="timeline-date">FEB 2021 — PRESENT</div>
+              <div>
+                <h3>Freelance Full-Stack Developer</h3>
+                <p class="timeline-place">Independent / Client Projects</p>
+                <p>Developing and maintaining websites and web applications, including database-backed portals, authentication, admin dashboards and responsive user interfaces.</p>
+                <div class="tag-list"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Python</span></div>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-date">2023</div>
+              <div>
+                <h3>Master's in Biblical Studies</h3>
+                <p class="timeline-place">University of Christian Studies and Seminary</p>
+                <p>Completed in 2023.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-date">2019</div>
+              <div>
+                <h3>Associate Degree in Business Administration</h3>
+                <p class="timeline-place">University of the People</p>
+                <p>Completed in 2019.</p>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -248,12 +216,24 @@ const projects = [
         <p class="contact-kicker">HAVE A PROJECT OR OPPORTUNITY?</p>
         <h2>Let's build something<br /><em>that matters.</em></h2>
         <a class="contact-email" href="mailto:mnazzer@gmail.com">mnazzer@gmail.com <span>↗</span></a>
-        <div class="contact-bottom"><span>UAE · OPEN TO REMOTE OPPORTUNITIES</span><div><a href="https://github.com/mohammednazzer5-ui" target="_blank" rel="noreferrer">GitHub ↗</a><a href="mailto:mnazzer@gmail.com">Email ↗</a></div></div>
+        <div class="contact-bottom">
+          <span>UAE · OPEN TO REMOTE OPPORTUNITIES</span>
+          <div>
+            <a href="https://github.com/mohammednazzer5-ui" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a href="mailto:mnazzer@gmail.com">Email ↗</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#home"><span class="brand-mark">MN</span><span>Mohammed Nazzer</span></a><span>© {new Date().getFullYear()} Mohammed Nazzer. Built with care.</span><a href="#home">BACK TO TOP ↑</a></div></footer>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="#home"><span class="brand-mark">MN</span><span>Mohammed Nazzer</span></a>
+      <span>© {new Date().getFullYear()} Mohammed Nazzer. Built with care.</span>
+      <a href="#home">BACK TO TOP ↑</a>
+    </div>
+  </footer>
 </BaseLayout>
 
 <style>
